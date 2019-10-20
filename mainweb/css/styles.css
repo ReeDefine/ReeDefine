@@ -1,0 +1,237 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+*{
+	box-sizing: border-box;
+}
+#bgimg{
+	background: url('../images/finalbg.png') no-repeat;
+	width: 100%;
+	height: 3000px;
+}
+#header-nav {
+  border-radius: 0;
+  border: 0;
+  margin-bottom: 0;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0px 2px #000000;
+}
+.navbar-header{
+	height: 70px;
+}
+.clrr{
+	color: #FF0000 !important;
+}.navbar{
+	padding: 0rem 1rem;
+}
+
+.navbar-brand{
+	float: left;
+	margin-top: 17px;
+}
+.navbar-brand h1{
+	display: inline;
+	font-size: 1.2rem;
+	color: white;
+}
+.navbar-brand a:hover{
+	text-decoration: none;
+}
+.navbar-toggle{
+	float: right;
+	margin-top: 20px;
+	margin-right: 17px;	
+	background-color: #1E00FF;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+}
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+.nav {
+  width: 100%;
+  overflow: auto;
+}
+
+/* Navigation links */
+.nav a{ 
+  float: left;
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  width: 20%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+  text-align: center; /* If you want the text to be centered */
+
+}
+.nav a p{
+	color: white;
+	font-weight: bold;
+}
+
+/* Add a background color on mouse-over */
+.nav a p:hover{
+  background-color: transparent;
+  color: #8B0F0F;
+  text-decoration: none;
+}
+.jumbotron{
+	background: none;
+	height: 1000px;
+	width: 100%;
+}
+.sticky-top{
+  background-color: #1E00FF;
+  height: 70px;
+}
+
+.sticky + #main-content {
+  padding-top: 60px;
+}
+#main-content{
+	width: 50%;
+	color: white;
+	margin-left: 150px;
+}
+
+.jumbotron h1{
+	display: inline;
+}
+#cont1{
+	text-shadow: 1px 1px black;
+}
+
+
+#logo-img{
+	background: url('../images/Logo.png');
+  width: 70px;
+  height: 70px;
+  display: block;
+  position: relative;
+  float: left;
+  margin-right: 10px;
+}
+
+#logo-img:hover{
+	background: url('../images/Logo 1.png')
+}
+/*Jumbotron over*/
+/*tiles start*/
+#no1{
+	font-family: Roboto;
+}
+.cont2{
+	height: 500px;
+}
+#tdee{
+	background: url('../images/Icon-Calculator.png') no-repeat;
+	width: 152px;
+	height: 169px;
+	float: left;
+	margin-top: 40px;
+	margin-left: 30px;
+}
+#calo{
+	background: url('../images/Icon-Calorie.png') no-repeat;
+	width: 152px;
+	height: 169px;
+	float: left;
+	margin-top: 40px;
+	margin-left: 30px;
+}
+#work{
+	background: url('../images/Icon-Workout.png') no-repeat;
+	width: 152px;
+	height: 169px;
+	float: left;
+	margin-top: 40px;
+	margin-left: 30px;
+}
+#diet{
+	background: url('../images/Icon-Diet.png') no-repeat;
+	width: 152px;
+	height: 169px;
+	float: left;
+	margin-top: 40px;
+	margin-left: 30px;
+}
+.tile-title{
+	float: left;
+	font-size:4rem;
+	margin-left:100px;
+	font-weight:bold;
+}
+h2{
+	font-size: 2rem;
+	font-weight: bold;
+}
+.tile-text{
+	float: left;
+	margin-left: 100px;
+	font-size: 16px;
+	width: 60%;
+}
+.btn1{
+	margin-top: 20px;
+	float: right;
+	margin-right: 12em;
+
+}
+form{
+	margin-left: 17em;
+}
+.form-group{
+	width: 15%;
+	float: left;
+	margin-left: 10px;
+
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+ 	
+ 	.nav li{
+ 		box-sizing: content-box; 
+ 	}
+ 	.nav li a{
+ 		height: 90px
+ 	}
+
+}
+@media (max-width: 767px){
+	#main-content{
+	width: 100%;
+	margin-left: 10px;
+	}
+	.jumbotron{
+		width: 80%;
+
+	}
+	.navbar-header{
+		width: 100%;
+	}
+}
+
+@media (min-width: 1200px){}
+.container {
+    max-width: 1500px;
+}
+}
