@@ -1,0 +1,365 @@
+body{
+}
+*{
+	box-sizing: border-box;
+}
+#bgimg{
+	background: url('../images/Rectangle 11.png') no-repeat;
+	width: 100%;
+	height: auto;
+}
+#header-nav {
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 0;
+  border: 0;
+  margin-bottom: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #1E00FF;
+
+}
+.navbar-header{
+	height: 70px;
+}
+.clrr{
+	color: #FF0000 !important;
+}.navbar{
+	padding: 0rem 1rem;
+}
+
+.navbar-brand{
+	float: left;
+	margin-top: 17px;
+}
+.navbar-brand h1{
+	display: inline;
+	font-size: 1.2rem;
+	color: white;
+}
+.navbar-brand a:hover{
+	text-decoration: none;
+}
+.navbar-toggle{
+	float: right;
+	margin-top: 20px;
+	margin-right: 17px;	
+	background-color: #1E00FF;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+}
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #FFFFFF;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+.nav {
+  width: 100%;
+  overflow: auto;
+}
+
+/* Navigation links */
+.nav a{ 
+  float: left;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9em;
+  width: 25%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+  text-align: center; /* If you want the text to be centered */
+
+}
+.nav a p{
+	color: white;
+	font-weight: bold;
+}
+
+/* Add a background color on mouse-over */
+.nav a p:hover{
+  background-color: transparent;
+  color: #8B0F0F;
+  text-decoration: none;
+}
+.sticky-top{
+  background-color: #1E00FF;
+  height: 70px;
+}
+
+.sticky + #main-content {
+  padding-top: 60px;
+}
+#main-content{
+	font-family: Roboto;
+}
+.jumbotron{
+	background: none;
+	height: 1000px;
+	width: 100%;
+}
+.btn{
+	background-color: #1E00FF;
+	border: 2px groove #1700C4;
+}
+#abt{
+	margin-top: 275px;
+	width: 75%;
+	color: #000000;
+
+}
+#abt p{
+	font-size: 25px;
+}
+
+#main-content{
+	width: 50%;
+	color: white;
+	margin-left: 100px;
+}
+
+.jumbotron h1{
+	display: inline;
+}
+.lead{
+	margin-left: 5px; 
+}
+#cont1{
+	text-shadow: 1px 1px black; 
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+#cont1 h1{
+	font-size: 7em;
+	font-weight: bold;
+}
+
+#logo-img{
+	background: url('../images/Logo.png');
+  width: 70px;
+  height: 70px;
+  display: block;
+  position: relative;
+  float: left;
+  margin-right: 10px;
+}
+
+#logo-img:hover{
+	background: url('../images/Logo 1.png')
+}
+/*Jumbotron over*/
+/*tiles start*/
+.cont2{
+	height: 600px;
+	overflow-y: auto;
+}
+#tdee{
+	background: url('../images/Icon-Calculator.png') no-repeat;
+	width: 152px;
+	height: 169px;
+	float: left;
+	margin-top: 40px;
+	margin-left: 30px;
+}
+#calo{
+	background: url('../images/Icon-Calorie.png') no-repeat;
+	width: 152px;
+	height: 169px;
+	float: left;
+	margin-top: 40px;
+	margin-left: 30px;
+}
+#work{
+	background: url('../images/Icon-Workout.png') no-repeat;
+	width: 152px;
+	height: 169px;
+	float: left;
+	margin-top: 40px;
+	margin-left: 30px;
+}
+#diet{
+	background: url('../images/Icon-Diet.png') no-repeat;
+	width: 152px;
+	height: 169px;
+	float: left;
+	margin-top: 40px;
+	margin-left: 30px;
+}
+.tile-title{
+	float: left;
+	font-size:4rem;
+	margin-left:100px;
+	font-weight:bold;
+}
+h2{
+	font-size: 2rem;
+	font-weight: bold;
+}
+.tile-text{
+	float: left;
+	margin-left: 100px;
+	font-size: 16px;
+	width: 60%;
+}
+.btn1{
+	
+	margin-top: 20px;
+	float: right;
+	margin-right: 12em;
+
+}
+.btn1 a{
+	width: 10em;
+}
+
+
+.carousel{
+	width: 90%;
+	margin: 0 auto;
+}
+@media (min-width: 576px)
+.bd-example {
+    padding: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: .2rem;
+}
+.bd-example {
+    position: relative;
+    padding: 1rem;
+    margin: 1rem -15px 0;
+    border: solid #f8f9fa;
+    border-width: .2rem 0 0;
+}
+.carousel-item img{
+	height: 400px;
+}
+@media (min-width: 768px) and (max-width: 991px){
+ 	
+ 	.nav li{
+ 		box-sizing: content-box; 
+ 	}
+ 	.nav li a{
+ 		height: 90px
+ 	}
+
+}
+@media (max-width: 767px){
+	#main-content{
+	width: 100%;
+	margin-left: 10px;
+	}
+	.jumbotron{
+		width: 80%;
+
+	}
+	.navbar-header{
+		width: 100%;
+	}
+	.nav{
+		float: right;
+		width: 25%;
+		margin-right: 1.1em;
+		margin-top: 1px;
+	}
+	.nav a{
+		width: 100%;
+		background-color: white;
+	}
+	.nav a p{
+		color: black;
+	}
+	.nav a p:hover{
+		color: #000000;
+	}
+	.nav a:hover{
+		background-color: #E1EBF2;
+	}
+
+}
+
+@media (min-width: 1200px){
+.container {
+    max-width: 1500px;
+}
+}
+
+@media (max-width: 1334px ) and (min-width: 991px){
+	.form-group{
+		width: 50%;
+	}
+	
+}
+@media (max-width: 1078px){
+	#abt p{
+		font-size: 16px;
+	}
+	#cont1 h1{
+		font-size: 5em;
+	}
+}
+@media (max-width: 991px){
+	#tdee{
+		background: url('../images/Icon-Calculator-sm.png') no-repeat;
+		width: 75px;
+		height: 85px;
+		float: left;
+		margin-top: 40px;
+		margin-left: 5px;
+	}
+	#calo{
+		background: url('../images/Icon-Calorie-sm.png') no-repeat;
+		width: 75px;
+		height: 85px;
+		float: left;
+		margin-top: 150px;
+		margin-left: 5px;
+	}
+	#work{
+		background: url('../images/Icon-Workout-sm.png') no-repeat;
+		width: 75px;
+		height: 85px;
+		float: left;
+		margin-top: 150px;
+		margin-left: 5px;
+	}
+	#diet{
+		background: url('../images/Icon-Diet-sm.png') no-repeat;
+		width: 75px;
+		height: 85px;
+		float: left;
+		margin-top: 150px;
+		margin-left: 5px;
+	}
+	form{
+		margin-left: 20px;
+	}
+	.form-group{
+		width: 35%;
+	}
+
+	.btn1{
+		float: right;
+		margin-right: 0px;
+		margin-bottom: 100px;
+	}
+	.cont2{
+		margin-bottom: 20px;
+		height: auto;
+	}
+
+}
+
