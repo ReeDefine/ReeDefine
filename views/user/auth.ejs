@@ -1,16 +1,118 @@
-<form action="/user/login" method="POST">
-    <input type="text" placeholder="Username"  class="form-control" name="username">
-    <input type="password" class="form-control" name="password" placeholder="password">
-    <input type="submit" value="Login" class="btn btn-primary">
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/styles2.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <title>ReDefine</title>
+</head>
 
-<br>
-<br>
+<body>
+<div id="bgimg">
+    <!--navbar starts-->
+    <header class="sticky-top">
+        <nav id="header-nav" class="navbar navbar-expand-md">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="index.html" class="pull-left visible-md visible-lg">
+                        <div id="logo-img"></div>
+                    </a>
+                    <div class="navbar-brand">
+                        <a href="index.html"><h1 class="clrr">Re</h1><h1>Define</h1> </a>
+                    </div>
+                    <button type="button" class="navbar-toggle collapsed d-block d-md-none" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false" onclick="myFunction(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </button>
+                </div>
 
-    <h1>Sign Up</h1>
-    <form action="/user/register"method="post">
-        <input type="text" placeholder="Username" name="username"  >
-        <input type="password" placeholder="Password" name="password">
-        <input type="date" name="DOB">
-        <input type="submit" value="Sign Up" class="btn btn-primary">
+
+                <div id="collapsable-nav" class="collapse navbar-collapse">
+                    <div id="nav-list" class="nav navbar-nav">
+                        <a href="#abt">
+                            <p>
+                                <br class=".d-none .d-sm-block">About ReDefine</p>
+                        </a>
+                        <a href="calcont\index1.html">
+                            <p>
+                                <br class=".d-none .d-sm-block">Dashboard</p>
+                        </a>
+                        <a href="#">
+                            <p>
+                                <br class=".d-none .d-sm-block">User Login</p>
+                        </a>
+                        <a href="#">
+                            <p>
+                                <br class=".d-none .d-sm-block">Doctor Login</p>
+                        </a>
+
+                    </div><!-- #nav-list -->
+                </div><!-- .collapse .navbar-collapse -->
+            </div><!-- .container -->
+        </nav><!-- #header-nav -->
+    </header>
+    <!--Navbar over-->
+    <!-- main body-->
+
+
+    <form class="login col-lg-6 col-md-6 col-sm-12 col-xs-12" action="/user/login" method="POST">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Remember me</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Log In</button>
     </form>
+<!--    dsdf-->
+
+<!--    <h1>Sign Up</h1>-->
+<!--    <form action="/user/register"method="post">-->
+<!--        <input type="text" placeholder="Username" name="username"  >-->
+<!--        <input type="password" placeholder="Password" name="password">-->
+<!--        <input type="date" name="DOB">-->
+<!--        <input type="submit" value="Sign Up" class="btn btn-primary">-->
+<!--    </form>-->
+
+
+    <form action="/user/register" method="post" class="signup col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" name="username"  placeholder="Email">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword4">Password</label>
+                <input type="password" class="form-control" id="inputPassword4" name="password"  placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputAddress">Date of Birth</label>
+            <input type="Date" class="form-control" name="DOB" id="inputAddress" placeholder="Years">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Sign up</button>
+    </form>
+
+
+
+
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/javascript/script2"></script>
+</body>
+</html>

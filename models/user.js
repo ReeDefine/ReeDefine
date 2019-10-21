@@ -1,4 +1,5 @@
 var mongoose  = require('mongoose'),
+    Detail = require('../models/detail')
     passportLocalMongoose = require('passport-local-mongoose');
 
 var User_Schema = new mongoose.Schema({
@@ -8,7 +9,7 @@ var User_Schema = new mongoose.Schema({
    updates: [
       {
          type: mongoose.Schema.Types.ObjectId,
-         ref: "detail"
+         ref: Detail
       }
    ]
 });

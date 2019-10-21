@@ -1,6 +1,7 @@
 var express = require('express'),
     router = express.Router(),
     passport = require('passport'),
+    Detail = require('../models/detail')
     LocalStrategy = require('passport-local'),
     User = require('../models/user.js');
 
@@ -22,10 +23,18 @@ router.post("/login",passport.authenticate("local",
     });
 
 
-
 router.get('/userDashboard',(request,respond)=>{
-    console.log("sdsadfasedsgf");
-    respond.render("user/userDashboard",{user:request.user})
+    respond.render("user/userDashboard",{user:request.user});
+    user_id = request.user.id;
+    User.findById(user_id).populate("updates").exec((err,foundUser)=>{
+        if (err){
+            console.log(err);
+        }else{
+            console.log("Showing:=>");
+            console.log(foundUser);
+            respond.render("user/userDashboard",{user:foundUser});
+        }
+    });
 });
 
 router.post("/register",(request,respond)=> {
@@ -34,13 +43,36 @@ router.post("/register",(request,respond)=> {
     User.register(newUser1, request.body.password, (err, createdUser) => {
         if (err) {
             console.log(err.message);
-            respond.send("Some error");
             return respond.render("user/auth")
         }
         passport.authenticate(`local`)(request, respond, () => {
             console.log(createdUser);
             respond.render("user/userDashboard",{user:createdUser})
         });
+    });
+});
+
+router.post('/addDetail',(request,respond)=>{
+    user = request.user.id;
+    User.findById(user,(err,fouundUser)=>{
+        if(err){
+            console.log(err.message,err.code);
+            respond.redirect('/user/dashboard');
+        }else{
+            Detail.create(request.body.detail,(err,createdComment)=>{
+                if(err){
+                    console.log(err.code,err.message)
+                }else{
+                    console.log(fouundUser);
+                    console.log(createdComment);
+                    fouundUser.updates.push(createdComment);
+                    fouundUser.save();
+                    respond.redirect('/user/userDashboard')
+                }
+            })
+
+
+        }
     });
 });
 
